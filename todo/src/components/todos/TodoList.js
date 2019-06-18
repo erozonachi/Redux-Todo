@@ -14,7 +14,7 @@ const TodoList = props => {
   
   useEffect(() => {
     LocalData.saveData('todoList', props.todos);
-  }, []);
+  }, [props.todos]);
   return (
     <Segment inverted>
       <List divided inverted relaxed>
