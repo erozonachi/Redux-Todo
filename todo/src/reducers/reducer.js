@@ -1,4 +1,4 @@
-import { CREATE_NEW_TODO, TOGGLE_TODO_COMPLETED, DELETE_TODO } from `../actions/action`;
+import { CREATE_NEW_TODO, TOGGLE_TODO_COMPLETED, DELETE_TODO } from '../actions/action';
 
 
 export const todosReducer = (state = [], action) => {
