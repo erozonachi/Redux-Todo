@@ -15,6 +15,8 @@ const TodoItem = props => {
         {props.todo.completed? <Icon name='check' /> : ''}
         &nbsp;
         {props.todo.value}
+        &nbsp;
+        <Icon name='times' />
       </List.Content>
     </List.Item>
   );
