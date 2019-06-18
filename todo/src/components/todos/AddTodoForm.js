@@ -6,7 +6,7 @@ const AddTodoForm = props => {
   return (
     <Form onSubmit={() => {}}>
       <Form.Group>
-        <Form.Input placeholder='Enter Task' ref={taskInput} />
+        <input placeholder='Enter Task' ref={taskInput} />
         <Form.Button type='submit' content='Add Task' />
       </Form.Group>
     </Form>
