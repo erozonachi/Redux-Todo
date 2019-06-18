@@ -13,4 +13,6 @@ const AddTodoForm = props => {
   );
 }
 
+const mapStateToProps = state => ({todos: state});
+
 export default AddTodoForm;
