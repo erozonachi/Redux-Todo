@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { addTodo } from '../../actions/creators';
 
 const AddTodoForm = props => {
   const taskInput = React.createRef();
@@ -16,4 +17,4 @@ const AddTodoForm = props => {
 
 const mapStateToProps = state => ({todos: state});
 
-export default connect(mapStateToProps)(AddTodoForm);
+export default connect(mapStateToProps, {addTodo})(AddTodoForm);
