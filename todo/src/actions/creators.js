@@ -6,3 +6,10 @@ export const addTodo = newTodo => {
     payload: newTodo,
   };
 }
+
+export const toggleCompleted = todo => {
+  return {
+    type: TOGGLE_TODO_COMPLETED,
+    payload: todo,
+  }
+}
