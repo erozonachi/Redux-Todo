@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { List, Segment } from 'semantic-ui-react'
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
@@ -9,7 +9,11 @@ const TodoList = props => {
     key={todo.id} 
     todo={todo}
     toggleCompleted={props.toggleCompleted}
-    deleteTodo={props.deleteTodo}  />)
+    deleteTodo={props.deleteTodo}  />);
+  
+  useEffect(() => {
+
+  }, []);
   return (
     <Segment inverted>
       <List divided inverted relaxed>
