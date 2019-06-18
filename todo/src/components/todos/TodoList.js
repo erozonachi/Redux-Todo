@@ -2,6 +2,7 @@ import React from 'react'
 import { List, Segment } from 'semantic-ui-react'
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
+import { toggleCompleted } from '../../actions/creators';
 
 const TodoList = props => {
   const todoList = props.todos.map(todo => <TodoItem 
@@ -19,4 +20,4 @@ const TodoList = props => {
 
 const mapStateToProps = state => ({todos: state});
 
-export default connect(mapStateToProps)(TodoList);
+export default connect(mapStateToProps, {toggleCompleted})(TodoList);
