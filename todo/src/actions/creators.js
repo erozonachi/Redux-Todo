@@ -13,3 +13,10 @@ export const toggleCompleted = todo => {
     payload: todo,
   }
 }
+
+export const deleteTodo = todo => {
+  return {
+    type: DELETE_TODO,
+    payload: todo,
+  };
+}
