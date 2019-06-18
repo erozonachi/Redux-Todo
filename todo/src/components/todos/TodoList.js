@@ -16,4 +16,6 @@ const TodoList = props => {
   );
 }
 
+const mapStateToProps = state => ({todos: state});
+
 export default TodoList;
