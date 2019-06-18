@@ -3,6 +3,7 @@ import { List, Segment } from 'semantic-ui-react'
 import TodoItem from './TodoItem';
 import { connect } from 'react-redux';
 import { toggleCompleted, deleteTodo } from '../../actions/creators';
+import LocalData from '../../stores/LocalData';
 
 const TodoList = props => {
   const todoList = props.todos.map(todo => <TodoItem 
@@ -12,7 +13,7 @@ const TodoList = props => {
     deleteTodo={props.deleteTodo}  />);
   
   useEffect(() => {
-
+    LocalData.saveData('todoList', props.todos);
   }, []);
   return (
     <Segment inverted>
