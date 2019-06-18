@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <h1>Awesome Todo App</h1>
       <TodoList />
       <AddTodoForm />
     </div>
