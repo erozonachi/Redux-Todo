@@ -8,6 +8,11 @@ const TodoItem = props => {
       completed: !props.todo.completed,
     });
   }
+  const handleDelete = () => {
+    props.deleteTodo({
+      id: props.todo.id
+    });
+  }
 
   return (
     <List.Item onClick={handleClick} >
@@ -16,7 +21,7 @@ const TodoItem = props => {
         &nbsp;
         {props.todo.value}
         &nbsp;
-        <Icon name='times' />
+        <Icon onClick={handleDelete} name='times' />
       </List.Content>
     </List.Item>
   );
